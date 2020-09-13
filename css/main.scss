@@ -555,12 +555,8 @@ $subTitleMargin: 0 0 25px 0;
       font-size: 1.5em;
       font-weight: 900;
       padding: 15px;
-      // background-color: #00adff;
+      background-color: #00adff;
       color: #ffff00;
-      background: url('../img/plan/titleBg.png') no-repeat;
-      // span {
-      //   background-image: url('../img/plan/courseTitle.png') no-repeat right center;
-      // }
     }
     h2 {
       font-size: 1.35em;
@@ -572,6 +568,10 @@ $subTitleMargin: 0 0 25px 0;
       border: 2px solid #00adff;
       border-radius: 10px;
       margin: 40px 0 20px 0;
+    }
+    section {
+      margin-bottom: 0;
+      padding: 20px 0;
     }
   }
 
@@ -590,6 +590,10 @@ $subTitleMargin: 0 0 25px 0;
         width: 100%;
       }
     }
+  }
+
+  .caption_desc {
+    text-align: right;
   }
 
   .planTable {
@@ -813,6 +817,18 @@ $subTitleMargin: 0 0 25px 0;
 
 .frontHeader {
   border-bottom: 1px solid lightblue;
+  justify-content: space-around;
+  height: 83px;
+}
+
+.twoContainer {
+  @include flex();
+  align-items: center;
+  margin-top: 20px;
+  &__Item {
+    width: 49%;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+  }
 }
 
 .topHeaderNav {
@@ -879,9 +895,84 @@ $subTitleMargin: 0 0 25px 0;
   }
 }
 
+// ここからモーダル
+
+/* モーダルCSS */
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10; /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30,30,30,0.4);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 70%;
+  max-width: 700px;
+  padding: 10px 30px;
+  background-color: #fff;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.scrollModal {
+  max-height: 500px;
+  overflow: scroll;
+}
+
+/* 以下ボタンスタイル */
+button {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #282828;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  
+}
+
+#toContact {
+  max-width: none;
+}
+
+#openModal {
+  max-width: none;
+}
+
+// ここまでモーダル
+
 @media screen and (max-width: 767px) {
   .toggle_btn.front_toggle_btn {
     right: 10px;
+  }
+  .twoContainer {
+    display: block;
+    &__Item {
+      width: 100%;
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .modalWrapper {
+    width: 80%;
   }
 }
 

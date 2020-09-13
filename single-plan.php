@@ -12,17 +12,22 @@
 <p><?php the_field('plan_desc'); ?></p>
 <?php
 $plan_image1 = get_field('plan_img_1');
+$plan_img_1_caption = get_field('plan_img_1_caption');
 $plan_image2 = get_field('plan_img_2');
+$plan_img_2_caption = get_field('plan_img_2_caption');
 $plan_image3 = get_field('plan_img_3');
 $plan_image4 = get_field('plan_img_4');
 $googlemap_img   = get_field('googlemap_img');
+$remarks = get_field('remarks')
 ?>
 <div class="planContainer">
 <div class="planContainer__item">
 <img src="<?php echo $plan_image1; ?>" alt="" />
+<p class="caption_desc"><?php echo $plan_img_1_caption; ?></p>
 </div>
 <div class="planContainer__item">
 <img src="<?php echo $plan_image2; ?>" alt="" />
+<p class="caption_desc"><?php echo $plan_img_2_caption; ?></p>
 </div>
 <?php if($plan_image3) : ?>
 <div class="planContainer__item">
@@ -85,6 +90,7 @@ if ((!empty($day6)) && (!empty($day6_food))) : ?>
 </tr>
 <?php endif; ?>
 </table>
+<p><?php echo $remarks; ?></p>
 <p><img src="<?php echo $googlemap_img; ?>" alt="" /></p>
 </div>
 

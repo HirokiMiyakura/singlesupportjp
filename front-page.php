@@ -4,16 +4,80 @@
 <section id="">
 <p>
 <a href="<?php echo home_url(); ?>/gototravel/">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/top/main_pc.png" alt="" />
+  <img class="pc" src="<?php echo get_template_directory_uri(); ?>/img/top/main_pc.png" alt="" />
+  <img class="sp" src="<?php echo get_template_directory_uri(); ?>/img/top/main_sp.png" alt="" />
 </a>
 </p>
-<p>
-<a href="<?php echo home_url(); ?>/contact/">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/top/cv.svg" alt="" />
-</a>
-</p>
+
+<div class="twoContainer">
+  <div class="twoContainer__Item" style="box-shadow: none;">
+    <a href="<?php echo home_url(); ?>/contact/">
+      <button id="toContact" style="width: 100%;">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/goto/contact.png" alt="" />
+      </button>
+    </a>
+  </div>
+  <div class="twoContainer__Item" style="box-shadow: none;">
+    <button id="openModal" class="openModal" style="width: 100%;">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/goto/price.png" alt="" />
+    </button>
+  </div>
+</div>
+
 </section>
 <!-- /section -->
+
+<!-- モーダルエリアここから -->
+<section id="modalArea" class="modalArea">
+  <div id="modalBg" class="modalBg"></div>
+  <div class="modalWrapper">
+    <div class="modalContents">
+      <ul class="scrollModal">
+        <?php
+        $args = array(
+          'posts_per_page' => 50, // 表示する投稿数
+          'post_type' => 'dmodelplan', // 取得する投稿タイプのスラッグ
+          'orderby' => 'date', //日付で並び替え
+          'order' => 'DESC' // 降順 or 昇順
+        );
+        $my_posts = get_posts($args);
+        ?>
+        <?php foreach ($my_posts as $post) : setup_postdata($post); ?>
+          <li>
+            <a href="<?php echo get_permalink($post->ID); ?>">
+
+              <?php
+              // ターム名を表示
+              $terms = get_the_terms($post->ID, 'tax_name_1'); // タームが所属するタクソノミースラッグを指定
+              if (!empty($terms)) { // タームが複数選択されていたらカンマ区切りで表示
+                $output = array();
+                foreach ($terms as $term) {
+                  if ($term->parent != 0)
+                    $output[] = $term->name;
+                }
+                if (count($output)) {
+                  echo '<span class="term">' . join(", ", $output) . '</span>';
+                } else {
+                  echo '<span class="term">' . $term->name . '</span>';
+                }
+              }
+              ?>
+              <p>
+                <?php echo get_the_title($post->ID); ?>
+              </p>
+            </a>
+          </li>
+        <?php endforeach; ?>
+        <?php wp_reset_postdata(); ?>
+      </ul>
+
+    </div>
+    <div id="closeModal" class="closeModal">
+      ×
+    </div>
+  </div>
+</section>
+<!-- モーダルエリアここまで -->
 
 <!-- section -->
 <section id="">
@@ -61,11 +125,17 @@ TEL:03-3498-9231 FAX:03-3498-9281<br>
 宅地建物取引業　東京都知事（１）第102662号
 </p>
 </section>
-<style>
-section {
-  margin: 10px auto;
-  padding: 10px;
-}
-</style>
 </main>
 <?php get_footer('front'); ?>
+<script>
+jQuery(function($){
+$(function () {
+  $('#openModal').click(function(){
+      $('#modalArea').fadeIn();
+  });
+  $('#closeModal , #modalBg').click(function(){
+    $('#modalArea').fadeOut();
+  });
+});
+});
+</script>

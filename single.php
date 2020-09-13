@@ -31,6 +31,9 @@
 
 			<?php the_content(); // Dynamic Content ?>
 
+			<?php the_field('tarea'); ?>
+			<?php the_field('tarea_c'); ?>
+
 			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
 			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
