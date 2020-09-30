@@ -195,6 +195,50 @@ Template Name: GOTOトラベルキャンペーンページ（gototravel-page.php
 </section>
 <!-- /section -->
 
+<!-- <section> -->
+<section>
+<h3>【Go To トラベル利用】モデルコース紹介</h3>
+<h4>モデルコースをベースにご希望の日程や内容に応じて旅行プラン・見積、を作成いたします。</h4>
+<ul class="scrollModal" style="margin-top: 20px;">
+<?php
+$args = array(
+  'posts_per_page' => 50, // 表示する投稿数
+  'post_type' => 'dmodelplan', // 取得する投稿タイプのスラッグ
+  'orderby' => 'date', //日付で並び替え
+  'order' => 'DESC' // 降順 or 昇順
+);
+$my_posts = get_posts($args);
+?>
+<?php foreach ($my_posts as $post) : setup_postdata($post); ?>
+  <li>
+    <a href="<?php echo get_permalink($post->ID); ?>">
+
+      <?php
+      // ターム名を表示
+      $terms = get_the_terms($post->ID, 'tax_name_1'); // タームが所属するタクソノミースラッグを指定
+      if (!empty($terms)) { // タームが複数選択されていたらカンマ区切りで表示
+        $output = array();
+        foreach ($terms as $term) {
+          if ($term->parent != 0)
+            $output[] = $term->name;
+        }
+        if (count($output)) {
+          echo '<span class="term">' . join(", ", $output) . '</span>';
+        } else {
+          echo '<span class="term">' . $term->name . '</span>';
+        }
+      }
+      ?>
+      <p>
+        <?php echo get_the_title($post->ID); ?>
+      </p>
+    </a>
+  </li>
+<?php endforeach; ?>
+<?php wp_reset_postdata(); ?>
+</ul>
+<!-- </section> -->
+
 <!-- section -->
 <section id="RYOTEI">
 <h3>【シングルサポート ご旅行のお問い合わせから、お申込み・ご出発まで】</h3>
