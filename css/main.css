@@ -1009,6 +1009,7 @@ section {
 .scrollModal {
   max-height: 500px;
   overflow: scroll;
+  list-style-type: none;
 }
 
 /* 以下ボタンスタイル */
