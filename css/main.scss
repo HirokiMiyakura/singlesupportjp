@@ -956,6 +956,10 @@ button {
   max-width: none;
 }
 
+.openModal:hover {
+  opacity: 0.8;
+}
+
 // ここまでモーダル
 
 @media screen and (max-width: 767px) {

@@ -1029,6 +1029,10 @@ button {
   max-width: none;
 }
 
+.openModal:hover {
+  opacity: 0.8;
+}
+
 @media screen and (max-width: 767px) {
   .toggle_btn.front_toggle_btn {
     right: 10px;
