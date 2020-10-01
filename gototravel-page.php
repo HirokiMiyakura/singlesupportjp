@@ -199,7 +199,7 @@ Template Name: GOTOトラベルキャンペーンページ（gototravel-page.php
 <section>
 <h3>【Go To トラベル利用】モデルコース紹介</h3>
 <h4>モデルコースをベースにご希望の日程や内容に応じて旅行プラン・見積、を作成いたします。</h4>
-<ul class="scrollModal" style="margin-top: 20px;">
+<ul class="scrollModal" style="margin-top: 20px;overflow: visible;">
 <?php
 $args = array(
   'posts_per_page' => 50, // 表示する投稿数
