@@ -1,819 +1,647 @@
 $mainWidth: 1024px;
 $sectionWidth: 800px;
-$sectionMargin: 0 auto 75px auto;
-$sectionPadding: 50px 0;
+$sectionMargin: 0 auto 15px auto;
+$sectionPadding: 10px 0;
 $mainTitleMargin: 0 auto 45px auto;
 $subTitleMargin: 0 0 25px 0;
 
-// html {
-//   box-sizing: border-box;
-// }
-// *, *:before, *:after {
-//   box-sizing: inherit;
-// }
+// cf7 confirm
+.wpcf7c-conf {
+  background-color: #eeeeee!important;
+}
 
-// #ss_campaign {
-
-  // cf7 confirm
-  .wpcf7c-conf {
-    background-color: #eeeeee!important;
-  }
-
-  /*============
-  nav
-  =============*/
+/*============
+nav
+=============*/
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 200px!important;
+  background: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s;
+  z-index: 3;
+  opacity: 0;
+}
+.open nav {
+  left: 0;
+  opacity: 1;
+}
+nav .inner {
+  padding: 25px 10px;
+}
+nav .inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav .inner ul li {
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+nav .inner ul li a {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  padding: 1em;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+nav .inner ul li a:hover {
+  background: #e4e4e4;
+}
+@media screen and (max-width: 767px) {
   nav {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -300px;
-    bottom: 0;
-    width: 200px!important;
-    background: #ffffff;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    transition: all .5s;
-    z-index: 3;
-    opacity: 0;
+    left: -220px;
+    width: 220px;
   }
-  .open nav {
-    left: 0;
-    opacity: 1;
-  }
-  nav .inner {
-    padding: 25px 10px;
-  }
-  nav .inner ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  nav .inner ul li {
-    position: relative;
-    margin: 0;
-    border-bottom: 1px solid #333;
-  }
-  nav .inner ul li a {
-    display: block;
-    color: #333;
-    font-size: 14px;
-    padding: 1em;
-    text-decoration: none;
-    transition-duration: 0.2s;
-  }
-  nav .inner ul li a:hover {
-    background: #e4e4e4;
-  }
-  @media screen and (max-width: 767px) {
-    nav {
-      left: -220px;
-      width: 220px;
-    }
-  }
-  /*============
-  .toggle_btn
-  =============*/
-  .toggle_btn {
-    display: block;
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    width: 30px;
-    height: 30px;
-    transition: all .5s;
-    cursor: pointer;
-    z-index: 3;
-  }
-  .toggle_btn span {
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background-color: #333;
-    border-radius: 4px;
-    transition: all .5s;
-  }
-  .toggle_btn span:nth-child(1) {
-    top: 4px;
-  }
-  .toggle_btn span:nth-child(2) {
-    top: 14px;
-  }
-  .toggle_btn span:nth-child(3) {
-    bottom: 4px;
-  }
-  .open .toggle_btn span {
-    background-color: #fff;
-  }
-  .open .toggle_btn span:nth-child(1) {
-    -webkit-transform: translateY(10px) rotate(-315deg);
-    transform: translateY(10px) rotate(-315deg);
-  }
-  .open .toggle_btn span:nth-child(2) {
-    opacity: 0;
-  }
-  .open .toggle_btn span:nth-child(3) {
-    -webkit-transform: translateY(-10px) rotate(315deg);
-    transform: translateY(-10px) rotate(315deg);
-  }
-  /*============
-  #mask
-  =============*/
-  #mask {
-    display: none;
-    transition: all .5s;
-  }
-  .open #mask {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: .8;
-    z-index: 2;
-    cursor: pointer;
-  }
+}
+/*============
+.toggle_btn
+=============*/
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all .5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+/*============
+#mask
+=============*/
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 2;
+  cursor: pointer;
+}
 
-  // ここからアコーディオン
+// ここからアコーディオン
 
-  .accordion-item{
+.accordion-item{
   width: 100%;
   text-align: center;
   cursor: pointer;
   margin-top: 30px;
-  }
+}
 
-  .accordion-header{
+.accordion-header{
   transition: ease-in-out 100ms;
   border-bottom: 1px solid #000;
   padding-bottom: 10px;
+}
+
+.accordion-text{
+  margin: 10px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #000;
+  display: none;
+  h3 {
+    font-size: 1.1em;
+    margin-top: 20px;
   }
-
-  .accordion-text{
-    margin: 10px 0;
-    padding: 20px 0;
-    border-bottom: 1px solid #000;
-    display: none;
-    h3 {
-      font-size: 1.1em;
-      margin-top: 20px;
-    }
-    p {
-      font-size: .8em;
-    }
-  }
-
-  .fa{
-    transition: ease-in-out 300ms;
-  }
-
-  .rotate-fa{
-    transform: rotate(180deg);
-  }
-
-
-  .accordion-header .fa{
-    line-height: 35px;
-  }
-
-  .accordion-no-bar{
-    border-bottom: 0;
-  }
-
-  // ここからメイン
-
-  th,
-  td {
-    margin-bottom: 20px;
-    vertical-align: top;
-  }
-
-  button, input, select, textarea {
-    border: 1px solid silver;
-    background-color: #fff;
-    border-radius: 4px;
-    margin-left: 270px;
-    max-width: 385px;
-  }
-
-  @mixin flex($justify:space-between,$align:center) {
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    justify-content: $justify;
-    -webkit-box-pack: $justify;
-    -ms-flex-pack: $justify;
-    align-items: $align;
-    -webkit-box-align: $align;
-    -ms-flex-align: $align;
-  }
-
-  header {
-    width: $mainWidth;
-    margin: 0 auto;
-    position: relative;
-    height: 83px;
-    background-color: #ffffff;
-    h1 {
-      position: absolute;
-      top: 10px;
-      left: 5px;
-      bottom: 10px;
-      width: 271px;
-      height: auto;
-      margin: 0;
-    }
-    .nav {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 157px;
-      height: auto;
-    }
-  }
-
-  main {
-    width: $mainWidth;
-    margin: 0 auto;
-  }
-
   p {
-    line-height: 2;
-    font-weight: 600;
-    span {
-      color: #ff4f8b;
+    font-size: .8em;
+  }
+}
+
+.fa{
+  transition: ease-in-out 300ms;
+}
+
+.rotate-fa{
+  transform: rotate(180deg);
+}
+
+
+.accordion-header .fa{
+  line-height: 35px;
+}
+
+.accordion-no-bar{
+  border-bottom: 0;
+}
+
+// ここからメイン
+
+th,
+td {
+  margin-bottom: 20px;
+  vertical-align: top;
+}
+
+button, input, select, textarea {
+  border: 1px solid silver;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-left: 270px;
+  max-width: 385px;
+}
+
+@mixin flex($justify:space-between,$align:center) {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  justify-content: $justify;
+  -webkit-box-pack: $justify;
+  -ms-flex-pack: $justify;
+  align-items: $align;
+  -webkit-box-align: $align;
+  -ms-flex-align: $align;
+}
+
+header {
+  width: $mainWidth;
+  margin: 0 auto;
+  position: relative;
+  height: 83px;
+  background-color: #ffffff;
+  h1 {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    bottom: 10px;
+    width: 271px;
+    height: auto;
+    margin: 0;
+  }
+  .nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 157px;
+    height: auto;
+  }
+}
+
+main {
+  width: $mainWidth;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 2;
+  font-weight: 600;
+  span {
+    color: #ff4f8b;
+  }
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  line-height: 2;
+  font-weight: 600;
+}
+
+section {
+  width: $sectionWidth;
+  margin: $sectionMargin;
+  padding: $sectionPadding;
+}
+
+.subTitle {
+  margin: $subTitleMargin;
+  background: url('../img/ss/namisen.png') no-repeat center bottom;
+  padding-bottom: 10px;
+  color: #00adff;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.mainTitle {
+  margin: $mainTitleMargin;
+  text-align: center;
+  color: #3d528f;
+  font-size: 1.3em;
+  font-weight: 900;
+  max-width: 320px;
+  padding: 5px;
+  border: 3px solid #3d528f;
+  border-radius: 30px;
+}
+
+.centering {
+  text-align: center;
+}
+
+.space {
+  margin-bottom: 50px;
+}
+
+.colorPink {
+  margin: $subTitleMargin;
+  padding: 0 30px;
+  color: #ff4f8b;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.miniText {
+  font-size: 10px;
+}
+
+#NAV {
+  margin: 45px auto 80px auto;
+  padding: 0;
+}
+
+.list {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__item {
+    width: calc((100% - 40px) / 5);
+    min-height: 72px; // ２行目から高さが低いのは不恰好なので、最低限の高さを設定
+    margin-bottom: 20px;
+    display: flex; // align-items: stretchを使うためにdisplay:flexを設定する
+    align-items: stretch;
+    border-right: 2px solid #3d528f;
+    text-align: center;
+    &:first-child {
+      border-left: 2px solid #3d528f;
+    }
+    &__link {
+      color:#3d528f;
+      font-weight: 900;
+      line-height: 1.5;
+      text-decoration: none;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        color: #00adff;
+        transition: all 0.15s;
+      }
     }
   }
+}
 
-  a:hover {
-    opacity: 0.8;
+#ABOUT {
+  padding-top: 0;
+  .aboutTitle {
+    max-width: 531px;
+    margin: 0 auto 20px auto;
   }
-
-  img {
-    max-width: 100%;
+  .aboutDescription {
+    padding: 0 45px 45px 45px;
   }
-
-  li {
-    line-height: 2;
-    font-weight: 600;
+  .object__container {
+    margin: 25px auto;
+    @include flex($align: top);
+    &__item:first-child {
+      flex-basis: 57%;
+      ul {
+        list-style-type: none;
+        li {
+          font-size: 10px;
+          margin-left: 30px;
+        }
+      } 
+    }
+    &__item:last-child {
+      flex-basis: 41.5%;
+    }
   }
+}
 
-  section {
-    width: $sectionWidth;
-    margin: $sectionMargin;
-    padding: $sectionPadding;
+.cvImage {
+  max-width: 320px;
+  margin: 45px auto 0 auto;
+}
+
+#OTOKU {
+  position: relative;
+  background: url('../img/ss/otoku_bg.png') no-repeat;
+  background-size: 100% 100%;
+  padding: 50px;
+  .ribbon {
+    position: absolute;
+    top: -50px;
+    left: -40px;
   }
-
-  .subTitle {
-    margin: $subTitleMargin;
-    background: url('../img/ss/namisen.png') no-repeat center bottom;
-    padding-bottom: 10px;
-    color: #00adff;
-    font-size: 1.5em;
-    text-align: center;
-  }
-
-  .mainTitle {
-    margin: $mainTitleMargin;
-    text-align: center;
+  h5 {
+    margin-top: 50px;
     color: #3d528f;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 900;
-    max-width: 320px;
-    padding: 5px;
-    border: 3px solid #3d528f;
-    border-radius: 30px;
+    span {
+      padding: 4px 10px;
+      background-color: #3d528f;
+      color: #fff;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
   }
-
-  .centering {
-    text-align: center;
-  }
-
-  .space {
+  .sample1 {
+    margin-top: 30px;
     margin-bottom: 50px;
   }
+}
 
-  .colorPink {
-    margin: $subTitleMargin;
-    padding: 0 30px;
-    color: #ff4f8b;
-    font-size: 1.3em;
+#MESSAGE {
+  h3 {
+    font-size: 1.5em;
+    font-weight: 900;
+    line-height: 2;
     text-align: center;
+    margin-bottom: 40px;
   }
-
-  .miniText {
-    font-size: 10px;
+  ul {
+    margin: 40px 0 40px 20px;
+    line-height: 2;
   }
+}
 
-  #NAV {
-    margin: 45px auto 80px auto;
-    padding: 0;
+#RYOTEI {
+  ol {
+    margin-left: 20px;
   }
+}
 
-  .list {
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    &__item {
-      width: calc((100% - 40px) / 5);
-      min-height: 72px; // ２行目から高さが低いのは不恰好なので、最低限の高さを設定
-      margin-bottom: 20px;
-      display: flex; // align-items: stretchを使うためにdisplay:flexを設定する
-      align-items: stretch;
-      border-right: 2px solid #3d528f;
-      text-align: center;
-      &:first-child {
-        border-left: 2px solid #3d528f;
-      }
-      &__link {
-        color:#3d528f;
-        font-weight: 900;
-        line-height: 1.5;
-        text-decoration: none;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-          color: #00adff;
-          transition: all 0.15s;
-        }
-      }
+#CONTACT {
+  background-color: #f9f8e3;
+  padding: 30px 60px;
+}
+
+.contact_desc_section {
+  margin-bottom: 0;
+  padding: 10px 0 30px;
+  p {
+    font-weight: 900;
+    text-align: center;
+    padding: 0 25px;
+    .hissu {
+      color: red;
     }
   }
+}
 
-  #ABOUT {
-    padding-top: 0;
-    .aboutTitle {
-      max-width: 531px;
-      margin: 0 auto 20px auto;
-    }
-    .aboutDescription {
-      padding: 0 45px 45px 45px;
-    }
-    .object__container {
-      margin: 25px auto;
-      @include flex($align: top);
-      &__item:first-child {
-        flex-basis: 57%;
-        ul {
-          list-style-type: none;
-          li {
-            font-size: 10px;
-            margin-left: 30px;
-          }
-        } 
-      }
-      &__item:last-child {
-        flex-basis: 41.5%;
-      }
-    }
-  }
+.contact_title {
+  margin-top: 0;  
+}
 
-  .cvImage {
-    max-width: 320px;
-    margin: 45px auto 0 auto;
-  }
-
-  #OTOKU {
-    position: relative;
-    background: url('../img/ss/otoku_bg.png') no-repeat;
-    background-size: 100% 100%;
-    padding: 50px;
-    .ribbon {
-      position: absolute;
-      top: -50px;
-      left: -40px;
-    }
-    h5 {
-      margin-top: 50px;
-      color: #3d528f;
-      font-size: 1.1em;
-      font-weight: 900;
-      span {
-        padding: 4px 10px;
-        background-color: #3d528f;
-        color: #fff;
-        margin-right: 10px;
-        border-radius: 5px;
-      }
-    }
-    .sample1 {
-      margin-top: 30px;
-      margin-bottom: 50px;
-    }
-  }
-
-  #MESSAGE {
-    h3 {
-      font-size: 1.5em;
-      font-weight: 900;
-      line-height: 2;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    ul {
-      margin: 40px 0 40px 20px;
-      line-height: 2;
-    }
-  }
-
-  #RYOTEI {
-    ol {
-      margin-left: 20px;
-    }
-  }
-
-  #CONTACT {
-    background-color: #f9f8e3;
-    padding: 30px 60px;
-  }
-
-  .contact_desc_section {
-    margin-bottom: 0;
-    padding: 10px 0 30px;
-    p {
-      font-weight: 900;
-      text-align: center;
-      padding: 0 25px;
+.contact_table {
+  tr {
+    font-size: .9em;
+    padding-bottom: 20px;
+    th {
+      text-align: left;
+      padding-bottom: 20px;
+      width: 45%;
+      margin-right: 5%;
       .hissu {
         color: red;
       }
+      span {
+        font-size: .8em;
+      }
     }
-  }
-
-  .contact_title {
-    margin-top: 0;  
-  }
-
-  .contact_table {
-    tr {
-      font-size: .9em;
+    td {
       padding-bottom: 20px;
-      th {
-        text-align: left;
-        padding-bottom: 20px;
-        width: 45%;
-        margin-right: 5%;
-        .hissu {
-          color: red;
-        }
-        span {
-          font-size: .8em;
+      width: 50%;
+      ul {
+        list-style-type: none;
+        @include flex();
+      }
+      .wpcf7-form-control-wrap.text-984,
+      .wpcf7-form-control-wrap.text-102 {
+        input[type="text"] {
+          width: 70%;
         }
       }
-      td {
-        padding-bottom: 20px;
-        width: 50%;
-        ul {
-          list-style-type: none;
-          @include flex();
-        }
-        .wpcf7-form-control-wrap.text-984,
-        .wpcf7-form-control-wrap.text-102 {
-          input[type="text"] {
-            width: 70%;
-          }
-        }
-      }
-      td.td_sonota {
-        padding-left: 15px;
-      }
     }
-    input[type="text"], input[type="email"], select, textarea {
-      width: 100%;
-      padding: 2px 2px 2px 4px;
+    td.td_sonota {
+      padding-left: 15px;
     }
   }
-
-  .doui {
-    width: 70%;
-    margin: 30px auto;
-    font-size: 1em;
-    font-weight: bold;
-    line-height: 2;
-    text-align: center;
+  input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 2px 2px 2px 4px;
   }
+}
 
-  .doui_check {
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    span {
-      color: #000;
-    }
+.doui {
+  width: 70%;
+  margin: 30px auto;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 2;
+  text-align: center;
+}
+
+.doui_check {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  span {
+    color: #000;
   }
+}
 
-  .wpcf7-confirm,
-  .wpcf7-back,
-  .wpcf7-submit {
-    margin-top: 20px;
+.wpcf7-confirm,
+.wpcf7-back,
+.wpcf7-submit {
+  margin-top: 20px;
+  background-color: #00adff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 30px;
+}
+
+.wpcf7-back {
+  background-color: silver;
+}
+
+.wpcf7-submit {
+  background-color: blue;
+}
+
+.back_submit {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.thanks_title {
+  margin-bottom: 40px;
+}
+
+.to_top {
+  margin-top: 40px;
+}
+
+.footer {
+  padding: 20px 0;
+}
+
+.planArticle {
+  max-width: 800px;
+  margin: 80px auto;
+  h1 {
+    font-size: 1.5em;
+    font-weight: 900;
+    padding: 15px;
     background-color: #00adff;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    padding: 10px 30px;
+    color: #ffff00;
   }
-
-  .wpcf7-back {
-    background-color: silver;
+  h2 {
+    font-size: 1.35em;
+    font-weight: 900;
+    // letter-spacing: .1em;
+    text-align: center;
+    padding: 7px 0;
+    color: #00adff;
+    border: 2px solid #00adff;
+    border-radius: 10px;
+    margin: 40px 0 20px 0;
   }
-
-  .wpcf7-submit {
-    background-color: blue;
-  }
-
-  .back_submit {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-    margin: 0 auto;
-  }
-
-  .thanks_title {
-    margin-bottom: 40px;
-  }
-
-  .to_top {
-    margin-top: 40px;
-  }
-
-  .footer {
+  section {
+    margin-bottom: 0;
     padding: 20px 0;
   }
+}
 
-  .planArticle {
-    max-width: 800px;
-    margin: 80px auto;
-    h1 {
-      font-size: 1.5em;
-      font-weight: 900;
-      padding: 15px;
-      background-color: #00adff;
-      color: #ffff00;
-    }
-    h2 {
-      font-size: 1.35em;
-      font-weight: 900;
-      // letter-spacing: .1em;
-      text-align: center;
-      padding: 7px 0;
-      color: #00adff;
-      border: 2px solid #00adff;
-      border-radius: 10px;
-      margin: 40px 0 20px 0;
-    }
-    section {
-      margin-bottom: 0;
-      padding: 20px 0;
-    }
-  }
+.planInner {
+  max-width: 700px;
+  margin: 0 auto;
+}
 
-  .planInner {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .planContainer {
-    @include flex();
-    justify-content: space-around;
-    flex-wrap: wrap;
-    &__item {
-      width: 49%;
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  .caption_desc {
-    text-align: right;
-  }
-
-  .planTable {
-    width: 100%;
-    border: collapse;
-    margin-bottom: 20px;
-    td {
-      min-width: 80px;
-      padding: 10px;
-      font-weight: 900;
-    }
-  }
-
-  .modelPlanTable {
-    width: 100%;
-  }
-
-  .sumTitle {
-    font-size: 1.2em;
-    font-weight: 900;
-    text-align: center;
-    background-color: #ffff00;
-    padding: 10px;
-    margin: 20px 0;
-    p {
-      margin: 0;
-    }
-  }
-
-  .pink {
-    color: #ff4f8b;
-  }
-
-  .hojoTitle {
-    font-size: 1.2em;
-    font-weight: 900;
-    text-align: center;
-    color: #ff4f8b;
-    background-color: #ffff00;
-    padding: 10px;
-    margin: 20px 0;
-    p {
-      margin: 0;
-    }
-  }
-
-  .yajirushi {
-    text-align: center;
-    margin: 25px auto;
-  }
-
-  @media screen and (max-width: 768px) { 
-    .pc {
-      display: none;
-    }
-    header,
-    main,
-    section { 
+.planContainer {
+  @include flex();
+  justify-content: space-around;
+  flex-wrap: wrap;
+  &__item {
+    width: 49%;
+    img {
       width: 100%;
     }
-    header {
-      position: static;
-      height: 48px;
-      h1 {
-        position: static;
-        margin-left: 10px;
-        width: 135px;
-        height: 48px;
-        img {
-          margin-top: 10px;
-        }
-      }
-      .nav {
-        float: right;
-        width: 91px;
-        height: 48px;
-        position: absolute;
-      }
-    }
-    .toggle_btn {
-      position: absolute;
-      top: 12px;
-      right: 110px;
-    }
-    section {
-      padding: 0 25px;
-    }
-    .subTitle {
-      margin: $subTitleMargin;
-      padding-bottom: 10px;
-      font-size: 1.2em;
-    }
-    
-    .mainTitle {
-      margin: $mainTitleMargin;
-      text-align: center;
-      font-size: 1.1em;
-      max-width: 320px;
-      padding: 5px;
-      border-radius: 30px;
-    }
-    .colorPink {
-      margin: $subTitleMargin;
-      padding: 0;
-      font-size: 1.1em;
-      text-align: left;
-    }
-    #NAV {
-      display: none;
-    }
-    #ABOUT {
-      .aboutTitle {
-        width: 70vw;
-        margin: 20px auto 10px 15px;    
-      }
-      .aboutDescription {
-        padding: 0 0 20px 0;
-      }
-      .object__container {
-        display: block;
-        &__item:first-child {
-          margin-bottom: 20px;
-        }
-      }
-    }
-    .otoku_outer {
-      padding: 25px 0;
-    }
-    #OTOKU {
-      background: url('../img/ss/otoku_bg_sp.png') no-repeat;
-      padding: 100px 20px 40px 20px;
-      .ribbon {
-        top: 0px;
-        left: -30px;
-        width: 205px;
-      }
-      h5 {
-        margin-top: 50px;
-        font-size: 1em;
-        span {
-          padding: 4px 10px;
-          margin-right: 10px;
-          border-radius: 5px;
-        }
-      }
-    }
-    #MESSAGE {
-      h3 {
-        font-size: 1.3em;
-        line-height: 1.6;
-        text-align: left;
-      }
-    }
-
-    #CONTACT {
-      padding: 30px 25px;
-    }
-
-    .contact_desc_section {
-      margin-bottom: 0;
-      padding: 20px 0;
-    }
-
-    .contact_title {
-      margin-top: 0;
-      padding-top: 0;
-      padding-bottom: 0;
-      margin-bottom: 0;
-      line-height: 0;
-    }
-
-    .contact_table {
-      tr {
-        th,
-        td {
-          display: block;
-          width: 320px;
-          margin-right: 0;
-          padding-bottom: 0;
-        }
-        th {
-          margin-bottom: 5px;
-        }
-      }
-      button, input, select, textarea {
-        width: 100%;
-      }
-    }
-
-    .planArticle {
-      margin: 25px auto;
-      padding: 15px;
-      h1 {
-        font-size: 1em;
-        padding: 10px;
-        background-size: contain;
-      }
-    }
-
-    .planContainer {
-      display: block;
-      margin: 10px 0;
-      &__item {
-        width: 100%;
-        img {
-          width: 100%;
-        }
-      }
-    }
   }
+}
 
-  @media screen and (min-width: 768px) { 
-    .sp {
-      display: none;
-    }
+.caption_desc {
+  text-align: right;
+}
+
+.planTable {
+  width: 100%;
+  border: collapse;
+  margin-bottom: 20px;
+  td {
+    min-width: 80px;
+    padding: 10px;
+    font-weight: 900;
   }
+}
 
-// }
+.modelPlanTable {
+  width: 100%;
+}
+
+.sumTitle {
+  font-size: 1.2em;
+  font-weight: 900;
+  text-align: center;
+  background-color: #ffff00;
+  padding: 10px;
+  margin: 20px 0;
+  p {
+    margin: 0;
+  }
+}
+
+.pink {
+  color: #ff4f8b;
+}
+
+.hojoTitle {
+  font-size: 1.2em;
+  font-weight: 900;
+  text-align: center;
+  color: #ff4f8b;
+  background-color: #ffff00;
+  padding: 10px;
+  margin: 20px 0;
+  p {
+    margin: 0;
+  }
+}
+
+.yajirushi {
+  text-align: center;
+  margin: 25px auto;
+}
 
 // front-page
+
+.w700_section {
+  width: 700px;
+  margin: 0 auto;
+}
 
 .frontHeader {
   border-bottom: 1px solid lightblue;
@@ -821,30 +649,72 @@ $subTitleMargin: 0 0 25px 0;
   height: 83px;
 }
 
-.twoContainer {
+.bar_above {
+  margin-top: -3px;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.main_message {
+  padding: 0 10%;
+  line-height: 1.5;
+  font-size: 28px;
+  text-align: center;
+}
+
+.main_image {
+  margin-bottom: 0;
+}
+
+.sub_message {
+  padding: 16px 15%;
+  line-height: 2;
+  font-size: 16px;
+  text-align: center;
+}
+
+.two_container {
   @include flex();
-  align-items: center;
-  margin-top: 20px;
-  &__Item {
-    width: 49%;
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.4);
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-top: 40px;
+  &__item:first-child {
+    width: 55%;
+  }
+  &__item:last-child {
+    width: 42%;
+    ul {
+      list-style-type: none;
+    }
+    h3 {
+      margin-top: 0;
+      font-size: 16px;
+      a {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+  img {
+    width: 100%;
   }
 }
 
 .topHeaderNav {
-  .topHeaderContainer {
-    @include flex($align: center);
-    justify-content: flex-end;
-    height: 83px;
-    .topHeaderContainerItem {
-      padding: 0 20px;
-      a {
-        color: #000;
-        font-weight: bold;
-        letter-spacing: .1em;
-      }
+.topHeaderContainer {
+  @include flex($align: center);
+  justify-content: flex-end;
+  height: 83px;
+  .topHeaderContainerItem {
+    padding: 0 20px;
+    a {
+      color: #000;
+      font-weight: bold;
+      letter-spacing: .1em;
     }
   }
+}
 }
 
 #basicInfomation {
@@ -946,7 +816,6 @@ button {
   border-radius: 2px;
   cursor: pointer;
   border: none;
-  
 }
 
 #toContact {
@@ -963,6 +832,287 @@ button {
 
 // ここまでモーダル
 
+// ここからオーダーメイド旅行プラン
+
+.ordermade_title {
+  color: #6a3906;
+  padding: 15px;
+  font-size: 32px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 40px;
+  background: url('../img/ordermade/title_bg.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+.ordermade_desc {
+  padding: 0 40px;
+  font-size: 16px;
+  font-weight: normal;
+
+}
+
+.ordermade_outer {
+  background-color: #f2efeb;
+  padding: 40px;
+  p {
+    font-weight: normal;
+  }
+}
+
+.ordermade_container {
+  @include flex();
+  align-items: start;
+  justify-content: space-between;
+  &__item {
+    width: 48%;
+  }
+}
+
+.ordermade_container.reverse {
+  flex-direction: row-reverse;
+}
+
+.ordermade_list {
+  margin: 40px 0;
+  padding: 0 60px 0 45px;
+  border-left: 12px solid #fff;
+  border-right: 12px solid #fff;
+}
+
+.ordermade_profile {
+  margin-top: 40px;
+  padding: 30px;
+  background: url('../img/ordermade/profile_bg.png') no-repeat;
+  background-size: cover;
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6a3906;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  p {
+    font-weight: bold;
+  }
+}
+
+.ordermade_cv {
+  margin-top: 40px;
+  p {
+    text-align: center;
+  }
+}
+
+.contact_to_supply {
+  padding: 0 8%;
+  margin-top: 32px;
+  p,
+  li {
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #9a2a21;
+  }
+  ul {
+    list-style-type: none;
+  }
+}
+
+.course_intro {
+  padding: 25px;
+  h2 {
+    padding-bottom: 20px;
+  }
+  .course_desc {
+    text-align: center;
+  }
+  ul {
+    padding: 0 8%;
+  }
+}
+
+// ここからシェア旅
+
+.share_outer {
+  padding: 48px 0;
+}
+
+.share_title {
+  color: #146987;
+  text-align: center;
+  background: url('../img/share/title_bg.png') no-repeat;
+  padding: 10px 0;
+}
+
+.share_main_message {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.75;
+  padding: 25px;
+  color: #146987;
+  span {
+    color: orange;
+  }
+}
+
+.base_color_bg {
+  background-color: #fff5e6;
+}
+
+.thin_outer {
+  padding: 0 50px;
+}
+
+.share_schedule_section {
+  margin: 32px auto;
+  font-weight: bold;
+  h2 {
+    font-size: 20px; 
+    color: #146987;
+    line-height: 1.5;
+  }
+}
+
+.share_plan_article {
+  padding: 40px 0;
+}
+
+.share_plan_section {
+  padding: 0;
+  h3 {
+    color: orange;
+    text-align: center;
+    font-size: 18px;
+  }
+  h2 {
+    color: #146987;
+    text-align: center;
+    font-size: 18px;
+    background: url('../img/share/title_bg.png') no-repeat;
+    padding: 10px 0;
+    span {
+      font-size: .7em;
+    }
+  }
+}
+
+.share_container {
+  @include flex();
+  justify-content: space-between;
+  align-items: start;
+  padding: 15px 0;
+  &__item {
+    flex-basis: 48%;
+  }
+}
+
+.orange_border_box {
+  padding: 20px 0;
+  border-top: 2px solid orange;
+  border-bottom: 2px solid orange;
+}
+
+// ビジネスサポートここから
+
+.business_bg {
+  background: url('../img/business/message_bg_pc.png') no-repeat;
+  background-size: cover;
+  padding: 20px 100px;
+  h1 {
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+.business_article {
+  padding: 60px 0;
+}
+
+.business_section {
+  h2 {
+    color: orange;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.65;
+    padding-left: 16px;
+    border-left: 8px solid orange;
+  }
+}
+
+.business_container {
+  @include flex();
+  justify-content: space-between;
+  margin: 24px 0;
+  &__item {
+    flex-basis: 47%;
+  }
+}
+
+.business_container.reverse {
+  flex-direction: row-reverse;
+}
+
+// ここからワーケーション
+
+.workation_outer {
+  background: url('../img/workation/bg_pc.png') repeat-y;
+  background-size: 100%;
+  margin-top: -61px;
+  padding-bottom: 61px;
+}
+
+.workation_title {
+  padding: 24px 0;
+  margin-top: 81px;
+  color: #3e79bd;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.75;
+  border-top: 2px solid #3e79bd;
+  border-bottom: 2px solid #3e79bd;
+}
+
+.workation_section {
+  margin: 0 auto 10px auto;
+  padding: 10px 0;
+  .cv {
+    text-align: center;
+  }
+}
+
+.workation_introduction_section {
+  width: 640px;
+  margin: 48px auto 32px auto;
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3e79bd;
+    text-align: center;
+  }
+  ul {
+    border-top: 2px solid #3e79bd;
+    border-bottom: 2px solid #3e79bd;
+    background-color: #fff;
+    padding: 32px 80px;
+  }
+}
+
+a,a:focus {
+  outline:none!important;
+}
+button,input,input:focus {
+  outline:none!important;
+}
+input::-moz-focus-inner, 
+button::-moz-focus-inner  {
+  border:none!important;
+}
+  
 @media screen and (max-width: 767px) {
   .toggle_btn.front_toggle_btn {
     right: 10px;
@@ -979,15 +1129,398 @@ button {
   .modalWrapper {
     width: 80%;
   }
+  .main_message {
+    padding: 20px;
+    font-size: 18px;
+    text-align: left;
+  }
+  .sub_message {
+    padding: 20px;
+    font-size: 16px;
+    text-align: left;
+  }
+  .two_container {
+    display: block;
+    &__item:first-child {
+      width: 100%;
+    }
+    &__item:last-child {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }
 
-a,a:focus {
-  outline:none!important;
+@media screen and (max-width: 768px) { 
+  .pc {
+    display: none;
+  }
+  header,
+  main,
+  section { 
+    width: 100%;
+    margin-bottom: 0;
+  }
+  header {
+    position: static;
+    height: 48px;
+    h1 {
+      position: static;
+      margin-left: 10px;
+      width: 135px;
+      height: 48px;
+      img {
+        margin-top: 10px;
+      }
+    }
+    .nav {
+      float: right;
+      width: 91px;
+      height: 48px;
+      position: absolute;
+    }
+  }
+  .toggle_btn {
+    position: absolute;
+    top: 12px;
+    right: 110px;
+  }
+  section {
+    padding: 0 25px;
+  }
+  .subTitle {
+    margin: $subTitleMargin;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  .mainTitle {
+    margin: $mainTitleMargin;
+    text-align: center;
+    font-size: 1.1em;
+    max-width: 320px;
+    padding: 5px;
+    border-radius: 30px;
+  }
+  .colorPink {
+    margin: $subTitleMargin;
+    padding: 0;
+    font-size: 1.1em;
+    text-align: left;
+  }
+
+  #basicInfomation {
+    margin-top: 32px;
+  }
+  #NAV {
+    display: none;
+  }
+  #ABOUT {
+    .aboutTitle {
+      width: 70vw;
+      margin: 20px auto 10px 15px;    
+    }
+    .aboutDescription {
+      padding: 0 0 20px 0;
+    }
+    .object__container {
+      display: block;
+      &__item:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .otoku_outer {
+    padding: 25px 0;
+  }
+  #OTOKU {
+    background: url('../img/ss/otoku_bg_sp.png') no-repeat;
+    padding: 100px 20px 40px 20px;
+    .ribbon {
+      top: 0px;
+      left: -30px;
+      width: 205px;
+    }
+    h5 {
+      margin-top: 50px;
+      font-size: 1em;
+      span {
+        padding: 4px 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+  #MESSAGE {
+    h3 {
+      font-size: 1.3em;
+      line-height: 1.6;
+      text-align: left;
+    }
+  }
+
+  #CONTACT {
+    padding: 30px 25px;
+  }
+
+  .contact_desc_section {
+    margin-bottom: 0;
+    padding: 20px 0;
+  }
+
+  .contact_title {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    line-height: 0;
+  }
+
+  .contact_table {
+    tr {
+      th,
+      td {
+        display: block;
+        width: 320px;
+        margin-right: 0;
+        padding-bottom: 0;
+      }
+      th {
+        margin-bottom: 5px;
+      }
+    }
+    button, input, select, textarea {
+      width: 100%;
+    }
+  }
+
+  .planArticle {
+    margin: 25px auto;
+    padding: 15px;
+    h1 {
+      font-size: 1em;
+      padding: 10px;
+      background-size: contain;
+    }
+  }
+
+  .planContainer {
+    display: block;
+    margin: 10px 0;
+    &__item {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // ここからフロントページ
+  .w700_section {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  
+
+  // ここからオーダーメイド旅行プラン
+
+  .ordermade_title {
+    margin-top: 32px;
+    padding: 10px;
+    font-size: 24px;
+  }
+
+  .ordermade_desc {
+    padding: 0
+  }
+
+  .ordermade_outer {
+    padding: 25px;
+  }
+
+  .ordermade_container {
+    display: block;
+    &__item {
+      width: 100%;
+    }
+  }
+
+  .ordermade_list {
+    margin: 25px 0;
+    padding: 30px 0 30px 20px;
+    border-top: 8px solid #fff;
+    border-bottom: 8px solid #fff;
+    border-left: none;
+    border-right: none;
+  }
+
+  .ordermade_profile {
+    margin-top: 40px;
+    padding: 25px;
+    background-size: cover;
+    h3 {
+      font-size: 16px;
+      line-height: 1.5;
+      padding-bottom: 16px;
+    }
+    p {
+      font-weight: bold;
+    }
+  }
+
+  .contact_to_supply {
+    h2 {
+      line-height: 1.5;
+    }
+    ol {
+      padding-left: 16px;
+    }
+  }
+
+  .course_intro {
+    padding: 0 25px;
+    margin-top: 32px;
+    h2 {
+      padding-bottom: 0;
+    }
+    .course_desc {
+      text-align: center;
+    }
+    ul {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  // ここからシェア旅
+
+  .share_outer {
+    padding: 0 25px 25px 25px;
+  }
+
+  .share_title {
+    font-size: 16px;
+    background-size: 100% 100%;
+  }
+
+  .base_color_bg {
+    padding-bottom: 25px;
+  }
+
+  .thin_outer {
+    padding: 0;
+  }
+
+  .share_schedule_section {
+    margin: 0;
+    padding: 25px;
+    ol {
+      padding-left: 16px;
+    }
+  }
+
+  .share_plan_article {
+    padding: 25px;
+  }
+
+  .share_plan_section {
+    padding: 0;
+    h3 {
+      font-size: 16px;
+    }
+    h2 {
+      background: url('../img/share/title_sp_bg.svg') no-repeat;
+      font-size: 16px;
+      background-size: cover;
+      padding: 6px 20px;
+    }
+  }
+
+  .share_container {
+    display: block;
+    &__item {
+      width: 100%;
+    }
+  }
+
+  .sp_base_orange_bg {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    background-color: #fff5e6;
+    h2 {
+      margin-top: 0;
+    }
+    .orange_border_box {
+      background-color: #fff;
+      padding: 0 25px;
+    }
+  }
+
+  // ビジネスサポートここから
+
+  .business_bg {
+    background-size: cover;
+    padding: 25px;
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  .business_section {
+    h2 {
+      color: orange;
+      font-size: 16px;
+    }
+  }
+
+  .business_container {
+    display: block;
+    margin: 24px 0;
+    &__item {
+      width: 100%;
+    }
+  }
+
+  .business_container.reverse {
+    flex-direction: row-reverse;
+  }
+
+  // ここからワーケーション
+
+  .workation_outer {
+    background: url('../img/workation/bg_sp.png') repeat-y;
+    background-size: 100%;
+    margin-top: -61px;
+    // padding-bottom: 61px;
+  }
+  
+  .workation_section {
+    margin: 0 auto;
+    padding: 15px 25px;
+  }
+
+  .workation_title {
+    margin-top: 35px;
+  }
+
+  .workation_space {
+    height: 70px;
+  }
+
+  .workation_introduction_section {
+    width: 100%;
+    padding: 25px;
+    margin-top: 0;
+    ul {
+      padding: 25px;
+    }
+  }
 }
-button,input,input:focus {
-  outline:none!important;
-}
-input::-moz-focus-inner, 
-button::-moz-focus-inner  {
-  border:none!important;
+
+@media screen and (min-width: 768px) { 
+  .sp {
+    display: none;
+  }
 }
