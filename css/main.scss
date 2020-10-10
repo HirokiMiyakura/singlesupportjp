@@ -1015,6 +1015,18 @@ button {
   border-bottom: 2px solid orange;
 }
 
+.share_sample_list_outer {
+  padding: 0 10% 32px 10%;
+  ul {
+    list-style-type: none;
+    li {
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 // ビジネスサポートここから
 
 .business_bg {
@@ -1456,6 +1468,10 @@ button::-moz-focus-inner  {
       background-color: #fff;
       padding: 0 25px;
     }
+  }
+
+  .share_sample_list_outer {
+    padding: 0 0 16px 0;
   }
 
   // ビジネスサポートここから

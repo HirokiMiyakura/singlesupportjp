@@ -1160,6 +1160,18 @@ button {
   border-bottom: 2px solid orange;
 }
 
+.share_sample_list_outer {
+  padding: 0 10% 32px 10%;
+}
+
+.share_sample_list_outer ul {
+  list-style-type: none;
+}
+
+.share_sample_list_outer ul li a {
+  text-decoration: underline;
+}
+
 .business_bg {
   background: url("../img/business/message_bg_pc.png") no-repeat;
   background-size: cover;
@@ -1574,6 +1586,9 @@ button::-moz-focus-inner {
   .sp_base_orange_bg .orange_border_box {
     background-color: #fff;
     padding: 0 25px;
+  }
+  .share_sample_list_outer {
+    padding: 0 0 16px 0;
   }
   .business_bg {
     background-size: cover;

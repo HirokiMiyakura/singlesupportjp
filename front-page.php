@@ -110,6 +110,12 @@
       <ul>
         <li>
           <h3>
+            <a href="<?php echo home_url(); ?>/business/">ビジネスサポート</a>
+          </h3>
+          <p>サポート一覧</p>
+        </li>
+        <li>
+          <h3>
             <a target="_blank" href="https://singlesupport.co.jp/service/business/">旅行業・宅地建物取引業ビジネス</a>
           </h3>
           <p>副業・起業支援</p>
