@@ -1,18 +1,74 @@
 <?php get_header(); ?>
 <main role="main">
 <p class="bar_above"><img src="<?php echo get_template_directory_uri(); ?>/img/front/bar_bold.png" alt="" /></p>
-<h2 class="main_message">旅行業と不動産・宅地建物取引業からライフサポートまでのさまざまな特色のあるサービスを提供しています</h2>
-<div>
-<p class="pc main_image"><img src="<?php echo get_template_directory_uri(); ?>/img/front/pc_main.png" alt="" /></p>
-<p class="sp main_image"><img src="<?php echo get_template_directory_uri(); ?>/img/front/sp_main.png" alt="" /></p>
+<h2 class="main_message">旅行業と不動産・宅地建物取引業からライフサポートまでの<br class="pc">さまざまな特色のあるサービスを提供しています</h2>
+<div class="main_container">
+  <div class="main_container__item bg1">
+    <div class="main_container__item__inner">
+      <h2>旅行業</h2>
+      <ul>
+        <li><a href="<?php echo home_url(); ?>/gototravel/">GoToトラベルキャンペーン</a></li>
+        <li><a href="<?php echo home_url(); ?>/ordermade/">オーダーメイド旅行</a></li>
+        <li><a href="<?php echo home_url(); ?>/share/">シェア旅・交流旅（現地発着ツアー）</a></li>
+        <li><a target="_blank" href="https://singlesupport.co.jp/service/stay/">古民家・民家の宿</a></li>
+        <li><a href="<?php echo home_url(); ?>/workation/">ワーケーション・ロングステイ</a></li>
+        <li>オンライン旅行・代行</li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_container__item bg2">
+    <div class="main_container__item__inner">
+      <h2>不動産</h2>
+      <ul>
+        <li><a href="<?php echo home_url(); ?>/realestate/">新しい不動産活用法</a></li>
+        <li><a href="<?php echo home_url(); ?>/workation/">移住</a></li>
+        <li><a target="_blank" href="https://www.singlesupport.net/">渋谷、表参道不動産</a></li>
+        <li><a target="_blank" href="https://singlesupport.co.jp/online-preview/">オンライン内見・重説・契約</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_container__item bg3">
+    <div class="main_container__item__inner">
+      <h2>ビジネスサポート</h2>
+      <ul>
+        <li><a href="<?php echo home_url(); ?>/business/">ビジネスサポート</a></li>
+        <li><a target="_blank" href="https://singlesupport.co.jp/service/business/">旅行業・不動産業起業・副業支援</a></li>
+        <li><a target="_blank" href="https://singlesupport.co.jp/service/business/">旅行業・不動産業就業支援<br>（提携販売・業務委託コンサルタント）</a></li>
+        <li><a target="_blank" href="https://singlesupport.co.jp/online-seminar/">オンラインセミナー・説明会</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_container__item bg4">
+    <div class="main_container__item__inner">
+      <h2>ライフサポート</h2>
+      <ul>
+        <li><a target="_blank" href="https://singlesupport.co.jp/service/">おひとりさま向けサポート・サービス</a></li>
+        <li><a href="<?php echo home_url(); ?>/ending/">新しい人生の終い方</a></li>
+        <li>身元保証・死後委任契約</li>
+        <li>エンディング（終活）</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- <p class="pc main_image"><img src="<?php echo get_template_directory_uri(); ?>/img/front/pc_main.png" alt="" /></p>
+<p class="sp main_image"><img src="<?php echo get_template_directory_uri(); ?>/img/front/sp_main.png" alt="" /></p> -->
 </div>
 <div>
-<p class="pc"><a href="<?php echo home_url(); ?>/"><img src="<?php echo get_template_directory_uri(); ?>/img/front/pc_online.png" alt="" /></a></p>
-<p class="sp"><a href="<?php echo home_url(); ?>/"><img src="<?php echo get_template_directory_uri(); ?>/img/front/sp_online.png" alt="" /></a></p>
+<p class="pc">
+  <a target="_blank" href="https://singlesupport.co.jp/online-support/">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/front/pc_online.png" alt="" />
+  </a>
+</p>
+<p class="sp">
+  <a target="_blank" href="https://singlesupport.co.jp/online-support/">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/front/sp_online.png" alt="" />
+  </a>
+</p>
 </div>
-<p class="sub_message">シングルサポートでは、旅行業と不動産業・宅地建物取引業の事業をもとに、
-オーダーメイド旅行・現地発着ツアー・不動産の賃貸・売買から、エンディング（終活）、ビジネスなど
-ライフサポート全般までのさまざまな特色のあるサービスを提供しています。</p>
+<p class="sub_message">シングルサポートでは、旅行業と不動産業・宅地建物取引業の事業をもとに、<br class="pc">
+オーダーメイド旅行・現地発着ツアー・不動産の賃貸・売買から、エンディング（終活）、<br class="pc">
+ビジネスなどライフサポート全般までのさまざまな特色のあるサービスを提供しています。</p>
 <p><img src="<?php echo get_template_directory_uri(); ?>/img/front/bar_normal.svg" alt="" /></p>
 
 <article>

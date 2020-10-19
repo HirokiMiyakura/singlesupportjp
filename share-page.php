@@ -10,13 +10,7 @@ get_header();
     <p class="pc main_image"><img src="<?php echo get_template_directory_uri(); ?>/img/share/main_pc.png" alt="" /></p>
     <p class="sp main_image"><img src="<?php echo get_template_directory_uri(); ?>/img/share/main_sp.png" alt="" /></p>
   </div>
-  <h2 class="sp share_main_message">ひとり旅の気楽さと仲間とのわかちあい、
-現地合流・現地解散の新しい旅のスタイルです。
-現地到着後、現地ホテルなどで他の参加者と合流し、
-ある時は一緒に食事をしたり、観光したりなど、
-参加者の方同士が現地で旅の楽しさや
-ちょっぴり感じる旅の寂しさを<span>シェアする
-新しいスタイルの旅ツアーです。</span></h2>
+  <h2 class="sp share_main_message">ひとり旅の気楽さと仲間とのわかちあい、現地合流・現地解散の新しい旅のスタイルです。現地到着後、現地ホテルなどで他の参加者と合流し、ある時は一緒に食事をしたり、観光したりなど、参加者の方同士が現地で旅の楽しさやちょっぴり感じる旅の寂しさを<span>シェアする新しいスタイルの旅のツアーです。</span></h2>
   <section class="share_outer">
     <h1 class="share_title">シェア旅・交流旅（現地発着ツアー）</h1>
     <p class="ordermade_desc">参加者の皆様が現地の集合場所で合流し、皆様と一緒に現地での旅行をお楽しみいただき、現地で解散する「現地集合・解散」のツアーとなります。ご希望の日程に応じて現地発着ツアー集合前のホテルの手配や解散後のホテルの延泊の手配など、自由にアレンジが可能です。ご希望に応じてオーダーメイド旅行プランを作成させていただきますので、ご相談ください。</p>
@@ -62,11 +56,11 @@ get_header();
       <li>
       <a target="_blank" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%91%e6%b2%96%e7%b8%84%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3%e8%a6%87%e9%9b%86%e5%90%88%e3%83%bb/">【GoToトラベル利用】沖縄プラン3日間（那覇集合・解散）【2020年11月出発】</a></li>
       <li>
-      <a target="_blank" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%91%e6%b2%96%e7%b8%84%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3%e8%a6%87%e9%9b%86%e5%90%88%e3%83%bb/">【GoToトラベル利用】沖縄プラン3日間（那覇集合・解散）【2021年1月出発】</a></li>
+      <a target="_blank" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%80%e3%82%b7%e3%82%a7%e3%82%a2%e6%97%85%e3%83%bb%e4%ba%a4%e6%b5%81%e6%97%85%e3%80%91%e6%b2%96%e7%b8%84%e3%83%97%e3%83%a9-2/">【GoToトラベル利用】沖縄プラン3日間（那覇集合・解散）【2021年1月出発】</a></li>
       <li>
-      <a target="_blank" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%91%e6%b2%96%e7%b8%84%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3%e8%a6%87%e9%9b%86%e5%90%88%e3%83%bb/">【GoToトラベル利用】沖縄プラン3日間（那覇集合・解散）【2021年2月出発】</a></li>
+      <a target="_blank" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%80%e3%82%b7%e3%82%a7%e3%82%a2%e6%97%85%e3%83%bb%e4%ba%a4%e6%b5%81%e6%97%85%e3%80%91%e6%b2%96%e7%b8%84%e3%83%97%e3%83%a9-3/">【GoToトラベル利用】沖縄プラン3日間（那覇集合・解散）【2021年2月出発】</a></li>
       <li>
-      <a target="_blank" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%91%e6%b2%96%e7%b8%84%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3%e8%a6%87%e9%9b%86%e5%90%88%e3%83%bb/">【GoToトラベル利用】沖縄プラン3日間（那覇集合・解散）【2021年3月出発】</a></li>
+      <a target="_blank" href="https://singlesupport.jp/datour/%e3%80%90%e3%82%b7%e3%82%a7%e3%82%a2%e6%97%85%e3%83%bb%e4%ba%a4%e6%b5%81%e6%97%85%e3%80%91%e6%b2%96%e7%b8%84%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3%e8%a6%87%e9%9b%86%e5%90%88/">【GoToトラベル利用】沖縄プラン3日間（那覇集合・解散）【2021年3月出発】</a></li>
       </ul>
     </div>
     
@@ -86,14 +80,14 @@ get_header();
     <div class="share_sample_list_outer">
       <ul>
       <li><a target="_balnk" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%91%e6%b2%96%e7%b8%84%e3%82%b4%e3%83%ab%e3%83%95%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3%e8%a6%87/">【GoToトラベル】沖縄ゴルフプラン3日間（那覇集合・解散）【2020年11月出発】</a></li>
-      <li><a target="_balnk" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%91%e6%b2%96%e7%b8%84%e3%82%b4%e3%83%ab%e3%83%95%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3%e8%a6%87/">【GoToトラベル】沖縄ゴルフプラン3日間（那覇集合・解散）【2021年1月出発】</a></li>
-      <li><a target="_balnk" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%91%e6%b2%96%e7%b8%84%e3%82%b4%e3%83%ab%e3%83%95%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3%e8%a6%87/">【GoToトラベル】沖縄ゴルフプラン3日間（那覇集合・解散）【2021年2月出発】</a></li>
-      <li><a target="_balnk" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%91%e6%b2%96%e7%b8%84%e3%82%b4%e3%83%ab%e3%83%95%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3%e8%a6%87/">【GoToトラベル】沖縄ゴルフプラン3日間（那覇集合・解散）【2021年３月出発】</a></li>
+      <li><a target="_balnk" href="https://singlesupport.jp/datour/%e3%80%90goto%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%80%e3%82%b7%e3%82%a7%e3%82%a2%e6%97%85%e3%83%bb%e4%ba%a4%e6%b5%81%e6%97%85%e3%80%91%e6%b2%96%e7%b8%84%e3%82%b4%e3%83%ab/">【GoToトラベル】沖縄ゴルフプラン3日間（那覇集合・解散）【2021年1月出発】</a></li>
+      <li><a target="_balnk" href="https://singlesupport.jp/datour/%e3%80%90%e3%82%b7%e3%82%a7%e3%82%a2%e6%97%85%e3%83%bb%e4%ba%a4%e6%b5%81%e6%97%85%e3%80%91%e6%b2%96%e7%b8%84%e3%82%b4%e3%83%ab%e3%83%95%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3/">【GoToトラベル】沖縄ゴルフプラン3日間（那覇集合・解散）【2021年2月出発】</a></li>
+      <li><a target="_balnk" href="https://singlesupport.jp/datour/%e3%82%b7%e3%82%a7%e3%82%a2%e6%97%85%e3%83%bb%e4%ba%a4%e6%b5%81%e6%97%85%e3%80%91%e6%b2%96%e7%b8%84%e3%82%b4%e3%83%ab%e3%83%95%e3%83%97%e3%83%a9%e3%83%b33%e6%97%a5%e9%96%93%ef%bc%88%e9%82%a3%e8%a6%87/">【GoToトラベル】沖縄ゴルフプラン3日間（那覇集合・解散）【2021年３月出発】</a></li>
       </ul>
     </div>
   </section>
   <section class="share_plan_section">
-    <h3>【Go To トラベル利用】</h3>
+    <h3>【2020年12月13日（日）開催】</h3>
     <h2>「JALホノルルマラソン」ツアー<span>（ホノルル集合・解散）</span></h2>
     <div class="share_container">
       <div class="share_container__item">
@@ -111,7 +105,7 @@ get_header();
     </div>
   </section>
   <section class="share_plan_section">
-    <h3>【Go To トラベル利用】</h3>
+    <h3>【2020年12月】</h3>
     <h2>ハワイ・オアフ島 ゴルフプラン3日間<span>（ホノルル集合・解散）</span></h2>
     <div class="share_container">
       <div class="share_container__item">
@@ -124,13 +118,12 @@ get_header();
     </div>
     <div class="share_sample_list_outer">
       <ul>
-      <li><a target="_blank" href="https://singlesupport.jp/datour/%e3%80%90%e3%82%b7%e3%82%a7%e3%82%a2%e6%97%85%e3%83%bb%e4%ba%a4%e6%b5%81%e6%97%85%e3%80%91%e3%83%8f%e3%83%af%e3%82%a4%e3%82%b4%e3%83%ab%e3%83%953%e6%97%a5%e9%96%93%ef%bc%88%e3%83%9b%e3%83%8e%e3%83%ab/">【2020年12月15日～17日】ハワイ・オアフ島ゴルフプラン3日間（ホノルル集合・解散）</a></li>
-      <li><a target="_blank" href="https://singlesupport.jp/datour/%e3%80%90%e3%82%b7%e3%82%a7%e3%82%a2%e6%97%85%e3%83%bb%e4%ba%a4%e6%b5%81%e6%97%85%e3%80%91%e3%83%8f%e3%83%af%e3%82%a4%e3%82%b4%e3%83%ab%e3%83%953%e6%97%a5%e9%96%93%ef%bc%88%e3%83%9b%e3%83%8e%e3%83%ab/">【2020年12月19日～21日】ハワイ・オアフ島ゴルフプラン3日間（ホノルル集合・解散）</a></li>
+      <li><a target="_blank" href="https://singlesupport.jp/datour/%e3%80%90%e3%82%b7%e3%82%a7%e3%82%a2%e6%97%85%e3%83%bb%e4%ba%a4%e6%b5%81%e6%97%85%e3%80%91%e3%83%8f%e3%83%af%e3%82%a4%e3%82%b4%e3%83%ab%e3%83%953%e6%97%a5%e9%96%93%ef%bc%88%e3%83%9b%e3%83%8e%e3%83%ab/">【2020年12月14日～16日】ハワイ・オアフ島ゴルフプラン3日間（ホノルル集合・解散）</a></li>
       </ul>
     </div>
   </section>
   <section class="share_plan_section">
-    <h3>【Go To トラベル利用】</h3>
+    <h3>【2021年3月】</h3>
     <h2>ハワイ・オアフ島 海洋散骨・霊園視察の旅4日間<span>（ホノルル集合・解散）</span></h2>
     <div class="share_container">
       <div class="share_container__item">
@@ -221,7 +214,7 @@ get_header();
         <?php
         $args = array(
           'posts_per_page' => 50, // 表示する投稿数
-          'post_type' => 'dmodelplan', // 取得する投稿タイプのスラッグ
+          'post_type' => 'datour', // 取得する投稿タイプのスラッグ
           'orderby' => 'date', //日付で並び替え
           'order' => 'DESC' // 降順 or 昇順
         );

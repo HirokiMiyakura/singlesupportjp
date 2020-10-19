@@ -638,6 +638,47 @@ section {
 
 // front-page
 
+.main_container {
+  @include flex();
+  &__item {
+    flex-basis: 25%;
+    background-size: 100%;
+    height: 491px;
+    &.bg1 {
+      background: url('../img/front/main1.png') no-repeat; 
+    }
+    &.bg2 {
+      background: url('../img/front/main2.png') no-repeat; 
+    }
+    &.bg3 {
+      background: url('../img/front/main3.png') no-repeat; 
+    }
+    &.bg4 {
+      background: url('../img/front/main4.png') no-repeat; 
+    }
+    &__inner {
+      h2 {
+        padding-top: 280px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        color: #fff;
+      }
+      ul {
+        list-style-type: none;
+        // padding-top: 250px;
+        padding: 4px 16px;
+        li {
+          font-size: 12px;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
 .w700_section {
   width: 700px;
   margin: 0 auto;
@@ -659,6 +700,7 @@ section {
   padding: 0 10%;
   line-height: 1.5;
   font-size: 28px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -689,6 +731,7 @@ section {
     }
     h3 {
       margin-top: 0;
+      margin-bottom: 4px;
       font-size: 16px;
       a {
         font-weight: bold;
@@ -988,6 +1031,7 @@ button {
     font-size: 18px;
   }
   h2 {
+    margin-top: 0;
     color: #146987;
     text-align: center;
     font-size: 18px;
@@ -1126,6 +1170,42 @@ button::-moz-focus-inner  {
 }
   
 @media screen and (max-width: 767px) {
+
+  .main_container {
+    display: block;
+    &__item {
+      width: 100%;
+      background-size: 100% 100%!important;
+      &.bg1 {
+        background: url('../img/front/main1_sp.png') no-repeat; 
+        h2 {
+          padding-top: 260px;
+        }
+      }
+      &.bg2 {
+        background: url('../img/front/main2_sp.png') no-repeat; 
+      }
+      &.bg3 {
+        background: url('../img/front/main3_sp.png') no-repeat; 
+      }
+      &.bg4 {
+        background: url('../img/front/main4_sp.png') no-repeat; 
+      }
+      &__inner {
+        h2 {
+          padding-top: 295px;
+          font-size: 22px;
+        }
+        ul {
+          li {
+            text-align: center;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
   .toggle_btn.front_toggle_btn {
     right: 10px;
   }
@@ -1143,7 +1223,7 @@ button::-moz-focus-inner  {
   }
   .main_message {
     padding: 20px;
-    font-size: 18px;
+    font-size: 24px;
     text-align: left;
   }
   .sub_message {

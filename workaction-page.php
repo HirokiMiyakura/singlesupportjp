@@ -55,45 +55,13 @@ get_header();
     </p>
   </section>
   <section class="workation_introduction_section">
-  <h2>モデルコース紹介</h2>
+  <h2>モデルプラン紹介</h2>
   <div class="blue_border_box">
     <ul class="scrollModal" style="margin-top: 20px; max-height: none; overflow: visible;">
-    <?php
-    $args = array(
-      'posts_per_page' => 50, // 表示する投稿数
-      'post_type' => 'datour', // 取得する投稿タイプのスラッグ
-      'orderby' => 'date', //日付で並び替え
-      'order' => 'DESC' // 降順 or 昇順
-    );
-    $my_posts = get_posts($args);
-    ?>
-    <?php foreach ($my_posts as $post) : setup_postdata($post); ?>
-      <li>
-        <a href="<?php echo get_permalink($post->ID); ?>">
-
-          <?php
-          // ターム名を表示
-          $terms = get_the_terms($post->ID, 'tax_name_1'); // タームが所属するタクソノミースラッグを指定
-          if (!empty($terms)) { // タームが複数選択されていたらカンマ区切りで表示
-            $output = array();
-            foreach ($terms as $term) {
-              if ($term->parent != 0)
-                $output[] = $term->name;
-            }
-            if (count($output)) {
-              echo '<span class="term">' . join(", ", $output) . '</span>';
-            } else {
-              echo '<span class="term">' . $term->name . '</span>';
-            }
-          }
-          ?>
-          <p>
-            <?php echo get_the_title($post->ID); ?>
-          </p>
-        </a>
-      </li>
-    <?php endforeach; ?>
-    <?php wp_reset_postdata(); ?>
+      <li><a href="https://singlesupport.jp/dmodelplan/%e6%b2%96%e7%b8%84%e3%83%af%e3%83%bc%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%97%e3%83%a9%e3%83%b315%e6%b3%8a16%e6%97%a5/">【Go To トラベル利用】沖縄ワーケーション・オクマプライベートビーチ＆リゾート15泊16日</a></li>
+      <li><a href="https://singlesupport.jp/dmodelplan/%e3%80%90go-to-%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%91%e5%ae%ae%e5%8f%a4%e5%b3%b6%e3%83%af%e3%83%bc%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%bb%e3%82%b7%e3%82%ae/">【Go To トラベル利用】宮古島ワーケーション・シギラセブンマイルズリゾート滞在15泊16日</a></li>
+      <li><a href="https://singlesupport.jp/dmodelplan/%e3%80%90go-to-%e3%83%88%e3%83%a9%e3%83%99%e3%83%ab%e5%88%a9%e7%94%a8%e3%80%91%e7%9f%b3%e5%9e%a3%e5%b3%b6%e3%83%af%e3%83%bc%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%bb%e3%82%b0%e3%83%a9/">【Go To トラベル利用】石垣島ワーケーション・グランヴィリオリゾート石垣島滞在15泊16日</a></li>
+      <li><a href="https://singlesupport.jp/amodelplan/%e3%83%8f%e3%83%af%e3%82%a4%e3%83%bb%e3%82%aa%e3%82%a2%e3%83%95%e5%b3%b6%e3%80%80%e3%83%af%e3%83%bc%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%97%e3%83%a9%e3%83%b314%e6%b3%8a16%e6%97%a5/">【ワーケーションプラン】ハワイ・オアフ島ワイキキ コンドミニアム滞在14泊16日</a></li>
     </ul>
   </div>
   <div class="ordermade_cv">
