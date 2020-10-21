@@ -1,30 +1,233 @@
-<?php get_header('front'); ?>
+<?php get_header(); ?>
 <main role="main">
-<!-- section -->
-<section id="">
-<p>
-<a href="<?php echo home_url(); ?>/gototravel/">
-  <img class="pc" src="<?php echo get_template_directory_uri(); ?>/img/top/main_pc.png" alt="" />
-  <img class="sp" src="<?php echo get_template_directory_uri(); ?>/img/top/main_sp.png" alt="" />
-</a>
-</p>
-
-<div class="twoContainer">
-  <div class="twoContainer__Item" style="box-shadow: none;">
-    <a href="<?php echo home_url(); ?>/contact/">
-      <button id="toContact" style="width: 100%;">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/goto/contact.png" alt="" />
-      </button>
-    </a>
+<p class="bar_above"><img src="<?php echo get_template_directory_uri(); ?>/img/front/bar_bold.png" alt="" /></p>
+<h2 class="main_message">旅行業と不動産・宅地建物取引業からライフサポートまでの<br class="pc">さまざまな特色のあるサービスを提供しています</h2>
+<div class="main_container">
+  <div class="main_container__item bg1">
+    <div class="main_container__item__inner">
+      <h2>旅行業</h2>
+      <ul>
+        <li><a href="<?php echo home_url(); ?>/gototravel/">GoToトラベルキャンペーン</a></li>
+        <li><a href="<?php echo home_url(); ?>/ordermade/">オーダーメイド旅行</a></li>
+        <li><a href="<?php echo home_url(); ?>/share/">シェア旅・交流旅（現地発着ツアー）</a></li>
+        <li><a target="_blank" href="https://singlesupport.co.jp/service/stay/">古民家・民家の宿</a></li>
+        <li><a href="<?php echo home_url(); ?>/workation/">ワーケーション・ロングステイ</a></li>
+        <li>オンライン旅行・代行</li>
+      </ul>
+    </div>
   </div>
-  <div class="twoContainer__Item" style="box-shadow: none;">
-    <button id="openModal" class="openModal" style="width: 100%;">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/goto/price.png" alt="" />
-    </button>
+  <div class="main_container__item bg2">
+    <div class="main_container__item__inner">
+      <h2>不動産</h2>
+      <ul>
+        <li><a href="<?php echo home_url(); ?>/realestate/">新しい不動産活用法</a></li>
+        <li><a href="<?php echo home_url(); ?>/workation/">移住</a></li>
+        <li><a target="_blank" href="https://www.singlesupport.net/">渋谷、表参道不動産</a></li>
+        <li><a target="_blank" href="https://singlesupport.co.jp/online-preview/">オンライン内見・重説・契約</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_container__item bg3">
+    <div class="main_container__item__inner">
+      <h2>ビジネスサポート</h2>
+      <ul>
+        <li><a href="<?php echo home_url(); ?>/business/">ビジネスサポート</a></li>
+        <li><a target="_blank" href="https://singlesupport.co.jp/service/business/">旅行業・不動産業起業・副業支援</a></li>
+        <li><a target="_blank" href="https://singlesupport.co.jp/service/business/">旅行業・不動産業就業支援<br>（提携販売・業務委託コンサルタント）</a></li>
+        <li><a target="_blank" href="https://singlesupport.co.jp/online-seminar/">オンラインセミナー・説明会</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="main_container__item bg4">
+    <div class="main_container__item__inner">
+      <h2>ライフサポート</h2>
+      <ul>
+        <li><a target="_blank" href="https://singlesupport.co.jp/service/">おひとりさま向けサポート・サービス</a></li>
+        <li><a href="<?php echo home_url(); ?>/ending/">新しい人生の終い方</a></li>
+        <li>身元保証・死後委任契約</li>
+        <li>エンディング（終活）</li>
+      </ul>
+    </div>
   </div>
 </div>
 
+<!-- <p class="pc main_image"><img src="<?php echo get_template_directory_uri(); ?>/img/front/pc_main.png" alt="" /></p>
+<p class="sp main_image"><img src="<?php echo get_template_directory_uri(); ?>/img/front/sp_main.png" alt="" /></p> -->
+</div>
+<div>
+<p class="pc">
+  <a target="_blank" href="https://singlesupport.co.jp/online-support/">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/front/pc_online.png" alt="" />
+  </a>
+</p>
+<p class="sp">
+  <a target="_blank" href="https://singlesupport.co.jp/online-support/">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/front/sp_online.png" alt="" />
+  </a>
+</p>
+</div>
+<p class="sub_message">シングルサポートでは、旅行業と不動産業・宅地建物取引業の事業をもとに、<br class="pc">
+オーダーメイド旅行・現地発着ツアー・不動産の賃貸・売買から、エンディング（終活）、<br class="pc">
+ビジネスなどライフサポート全般までのさまざまな特色のあるサービスを提供しています。</p>
+<p><img src="<?php echo get_template_directory_uri(); ?>/img/front/bar_normal.svg" alt="" /></p>
+
+<article>
+<section class="w700_section">
+  <h2>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/front/travel_title.png" alt="" />
+  </h2>
+  <div class="two_container">
+    <div class="two_container__item">
+      <p><img src="<?php echo get_template_directory_uri(); ?>/img/front/travel_image.png" alt="" /></p>
+    </div>
+    <div class="two_container__item">
+      <ul>
+        <li>
+          <h3>
+            <a href="<?php echo home_url(); ?>/gototravel/">Go To トラベルキャンペーン</a>
+          </h3>
+          <p>最大35％割引＋地域共通クーポン15％</p>
+        </li>
+        <li>
+          <h3>
+            <a href="<?php echo home_url(); ?>/ordermade/">オーダーメイド旅行</a>
+          </h3>
+          <p>あなただけのこだわりの旅</p>
+        </li>
+        <li>
+          <h3>
+            <a href="<?php echo home_url(); ?>/share/">シェア旅・交流旅（現地発着ツアー）</a>
+          </h3>
+          <p>ひとり旅と仲間とのわかちあいの旅</p>
+        </li>
+        <li>
+          <h3>
+            <a href="<?php echo home_url(); ?>/workation">ワーケーション・ロングスティ</a>
+          </h3>
+          <p>新しいライフスタイル</p>
+        </li>
+        <li>
+          <h3>
+            <a target="_blank" href="https://singlesupport.co.jp/service/stay/">古民家・民家の宿</a>
+          </h3>
+          <p>古民家・民家の宿での滞在と日本の旅</p>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>
+<section class="w700_section">
+  <h2>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/front/estate_title.png" alt="" />
+  </h2>
+  <div class="two_container">
+    <div class="two_container__item">
+      <p><img src="<?php echo get_template_directory_uri(); ?>/img/front/estate_image.png" alt="" /></p>
+    </div>
+    <div class="two_container__item">
+      <ul>
+        <li>
+          <h3>
+            <a href="<?php echo home_url(); ?>/realestate/">新しい不動産活用法</a>
+          </h3>
+          <p>空き家活用と観光・インバウンド</p>
+        </li>
+        <li>
+          <h3>
+            <a target="_blank" href="https://www.singlesupport.net/">渋谷・表参道不動産サイト</a>
+          </h3>
+          <p>渋谷・表参道で暮らす</p>
+        </li>
+        <li>
+          <h3>
+            <a href="<?php echo home_url(); ?>/workation/">プチ移住・移住</a>
+          </h3>
+          <p>新しい人生の選択</p>
+        </li>
+        <li>
+          <h3>
+            <a target="_blank" href="https://singlesupport.co.jp/online-preview/">オンライン内見・重説・契約</a>
+          </h3>
+          <p>自宅にいながら部屋探し</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="w700_section">
+  <h2>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/front/business_title.png" alt="" />
+  </h2>
+  <div class="two_container">
+    <div class="two_container__item">
+      <p><img src="<?php echo get_template_directory_uri(); ?>/img/front/business_image.png" alt="" /></p>
+    </div>
+    <div class="two_container__item">
+      <ul>
+        <li>
+          <h3>
+            <a href="<?php echo home_url(); ?>/business/">ビジネスサポート</a>
+          </h3>
+          <p>サポート一覧</p>
+        </li>
+        <li>
+          <h3>
+            <a target="_blank" href="https://singlesupport.co.jp/service/business/">旅行業・宅地建物取引業ビジネス</a>
+          </h3>
+          <p>副業・起業支援</p>
+        </li>
+        <li>
+          <h3>
+            <a target="_blank" href="https://singlesupport.co.jp/service/sales/">旅行業・宅地建物取引業ビジネス</a>
+          </h3>
+          <p>提携販売・業務委託コンサルタント</p>
+        </li>
+        <li>
+          <h3>
+            <a target="_blank" href="https://singlesupport.co.jp/online-seminar/">オンラインセミナー・説明会</a>
+          </h3>
+          <p>オンラインによるビジネスサポート</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="w700_section">
+  <h2>
+    <img src="<?php echo get_template_directory_uri(); ?>/img/front/life_title.png" alt="" />
+  </h2>
+  <div class="two_container">
+    <div class="two_container__item">
+      <p><img src="<?php echo get_template_directory_uri(); ?>/img/front/life_image.png" alt="" /></p>
+    </div>
+    <div class="two_container__item">
+      <ul>
+        <li>
+          <h3>
+            <a target="_blank" href="https://singlesupport.co.jp/service/">おひとりさま向けサポート・サービス</a>
+          </h3>
+          <p>おひとりさまの「生き方」をトータルサポート</p>
+        </li>
+        <li>
+          <h3>
+            <a href="<?php echo home_url(); ?>/ending/">新しい人生の終い方</a>
+          </h3>
+          <p>思い出の地・ゆかりの地で眠る</p>
+        </li>
+        <li>
+          <h3>身元保証・死後委任契約</h3>
+          <p>いざという時、もしもの時のために</p>
+        </li>
+        <li>
+          <h3>エンディング（終活）</h3>
+          <p>残りの人生の生き方をサポート</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</article>
 <!-- /section -->
 
 <!-- モーダルエリアここから -->
@@ -79,38 +282,6 @@
 </section>
 <!-- モーダルエリアここまで -->
 
-<!-- section -->
-<section id="">
-<p>
-<a href="<?php echo home_url(); ?>/realestate/">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/top/estate_main.png" alt="" />
-</a>
-</p>
-<p class="cv_green">
-<a href="<?php echo home_url(); ?>/realestate/contact/index.html">
-  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/top/estate_cv.png" alt="" /> -->
-  お問い合わせ
-</a>
-</p>
-</section>
-<!-- /section -->
-
-<!-- section -->
-<section id="">
-<p>
-<a href="<?php echo home_url(); ?>/ending/">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/top/ending_main.png" alt="" />
-</a>
-</p>
-<p class="cv_green">
-<a href="<?php echo home_url(); ?>/ending/contact/index.html">
-  <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/top/ending_cv.png" alt="" /> -->
-  お問い合わせ
-</a>
-</p>
-</section>
-<!-- /section -->
-
 <section id="basicInfomation">
 <h3>
 <a href="<?php echo home_url(); ?>">
@@ -127,6 +298,11 @@ TEL:03-3498-9231 FAX:03-3498-9281<br>
 </section>
 </main>
 <?php get_footer('front'); ?>
+<!-- <style>
+section {
+  width: 700px;
+}
+</style> -->
 <script>
 jQuery(function($){
 $(function () {

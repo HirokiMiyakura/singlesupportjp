@@ -47,11 +47,11 @@ conditionizr.config({
 <nav>
 	<div class="inner">
 		<ul>
-			<li><a href="<?php echo home_url(); ?>/#ABOUT">Go To Travel<br class="sp">キャンペーンとは？</a></li>
-			<li><a href="<?php echo home_url(); ?>/#OTOKU">お得度</a></li>
-			<li><a href="<?php echo home_url(); ?>/#PERIOD_LOCATION">期間・場所</a></li>
-			<li><a href="<?php echo home_url(); ?>/#HOWTO">利用方法</a></li>
-			<li><a href="<?php echo home_url(); ?>/CONTACT">お問い合わせ</a></li>
+			<li><a href="<?php echo home_url(); ?>">ホーム</a></li>
+			<li><a href="<?php echo home_url(); ?>/gototravel/">GoToトラベルキャンペーン</a></li>
+			<li><a href="<?php echo home_url(); ?>/ordermade/">オーダーメイド旅行</a></li>
+			<li><a href="<?php echo home_url(); ?>/share">シェア旅・交流旅</a></li>
+			<li><a href="<?php echo home_url(); ?>/workation/">ワーケーション・ロングステイ</a></li>
 		</ul>
 	</div>
 </nav>
